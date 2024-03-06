@@ -12,9 +12,9 @@
    
     <main>
 
-        <section>
+        <section class="flex lg:gap-6 w-full overflow-hidden">
             
-            <aside id="nav-menu-1" aria-label="Side navigation" class=" z-40 flex flex-col bg-white border-r w-80  border-r-slate-200 md:flex hidden h-screen overflow-y-auto">
+            <aside id="nav-menu-1" aria-label="Side navigation" class=" z-40 flex flex-col bg-white border-r min-w-80  border-r-slate-200 md:flex hidden h-screen overflow-y-auto">
                 <div class="flex flex-col items-center gap-4 py-6 px-4 ">
                   <div class="flex items-center justify-between w-full">
                     <div class="flex items-center gap-2">
@@ -199,7 +199,88 @@
                 </footer>
               </aside>
 
+              <div class="w-9/12 mx-auto overflow-x-auto mt-8">
+                <div class="flex items-center justify-between border rounded p-2">
+                  <p class="text-slate-700 font-medium">Products</p>
+                  <div>
+                    <input type="text" name="" id="myInput" onkeyup="myFunction()" placeholder="Search for brands" class="border border-slate-200 p-2 outline-none rounded">
+                  </div>
+                </div>
+                <table id="myTable" class="w-full text-left border border-separate rounded border-slate-200" cellspacing="0">
+                  <tbody>
+                    <tr class="header">
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Brand</th>
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Description</th>
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Members</th>
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Categories</th>
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Tags</th>
+                      <th scope="col" class="hidden h-12 px-6 text-sm font-medium border-l sm:table-cell first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">Next Meeting</th>
+                    </tr>
+                    <tr class="block border-b sm:table-row last:border-b-0 border-slate-200 sm:border-none">
+                      <td data-th="Brand" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">Wix</td>
+                      <td data-th="Description" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">sample text</td>
+                      <td data-th="Members" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none !flex items-center gap-2 sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+
+                        <img src="https://i.pravatar.cc/82?img=10" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                        <img src="https://i.pravatar.cc/82?img=8" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                      </td>
+                      <td data-th="Categories" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+                        <span class="text-green-500 bg-gray-50 py-1 px-2 rounded">Automation</span>
+                      </td>
+                      <td data-th="Tags" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="bg-gray-50 py-1 px-2 rounded">#DigitalTransformation</span>
+                      </td>
+                      <td data-th="Next Meeting" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="py-1 px-2 rounded bg-green-100 text-green-600 ml-1">in 30 minutes</span>
+                      </td>
+                    </tr>
+                    <tr class="block border-b sm:table-row last:border-b-0 border-slate-200 sm:border-none">
+                      <td data-th="Brand" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">Shopify</td>
+                      <td data-th="Description" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">sample text</td>
+                      <td data-th="Members" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none !flex items-center gap-2 sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+
+                        <img src="https://i.pravatar.cc/82?img=4" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                        <img src="https://i.pravatar.cc/82?img=7" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                      </td>
+                      <td data-th="Categories" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+                        <span class="text-pink-500 bg-gray-50 py-1 px-2 rounded">E-Commerce</span>
+                      </td>
+                      <td data-th="Tags" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="bg-gray-50 py-1 px-2 rounded">#OnlineShopping</span>
+                      </td>
+                      <td data-th="Next Meeting" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="py-1 px-2 rounded bg-cyan-100 text-cyan-600 ml-1">Tomorrow</span>
+                      </td>
+                    </tr>
+                    <tr class="block border-b sm:table-row last:border-b-0 border-slate-200 sm:border-none">
+                      <td data-th="Brand" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">Mailchimp</td>
+                      <td data-th="Description" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">sample text</td>
+                      <td data-th="Members" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none !flex items-center gap-2 sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+
+                        <img src="https://i.pravatar.cc/82?img=12" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                        <img src="https://i.pravatar.cc/82?img=13" alt="user name" title="user name" width="24" height="24" class="max-w-full rounded-full" />
+                      </td>
+                      <td data-th="Categories" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500">
+                        <span class="text-green-500 bg-gray-50 py-1 px-2 rounded">SaaS</span>
+                      </td>
+                      <td data-th="Tags" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="bg-gray-50 py-1 px-2 rounded">#Innovation</span>
+                      </td>
+                      <td data-th="Next Meeting" class="before:w-24 before:inline-block before:font-medium before:text-slate-700 before:content-[attr(data-th)':'] sm:before:content-none flex items-center sm:table-cell h-12 px-6 text-sm transition duration-300 sm:border-t sm:border-l first:border-l-0 border-slate-200 stroke-slate-500 text-slate-500 ">
+                        <span class="py-1 px-2 rounded bg-cyan-100 text-cyan-600 ml-1">Tomorrow</span>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                  </tbody>
+                </table>
+              </div>
+
         </section>
     </main>
+
+ <script src="js/script.js"></script>
+
 </body>
 </html>
